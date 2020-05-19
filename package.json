@@ -1,7 +1,7 @@
 {
   "name": "it-spa",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projekt polega na napisaniu aplikacji Single Page Application dla ośrodka SPA dedykowanego programistom.",
   "main": "index.js",
   "scripts": {
     "start:db": "json-server --watch database.json",
@@ -18,5 +18,13 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kompedia/it-spa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kompedia/it-spa/issues"
+  },
+  "homepage": "https://github.com/kompedia/it-spa#readme"
 }
