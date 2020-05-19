@@ -11,14 +11,18 @@
 //Color definition
 $main-color: #202020;
 $secondary-color: #b37436;
+$tertiary-color: #fff7f0;
 $bg-color: #ccc ;
+
+body {
+  background-color: $tertiary-color ;
+}
 
 //Navbard styling
 .navbar {
   padding: 0.5em;
   font-size: 1.3em;
-  background: rgba(255, 255, 255, 0.9) !important; 
-
+  background: rgba(255, 247, 240, 0.9) !important; 
 }
 
 .fa-compact-disc {
@@ -141,12 +145,14 @@ $bg-color: #ccc ;
   width: 450px; 
   border-radius: 5px;
   height: auto;
+  filter: drop-shadow(0px 5px 4px black);
 }
 
 .info-section-mid-left img{
   width: 450px; 
   border-radius: 5px;
   height: auto;
+  filter: drop-shadow(0px 5px 4px black);
 }
 .info-section-mid-right {
   margin-right: 65px;
@@ -156,10 +162,10 @@ $bg-color: #ccc ;
   margin-left: 65px;
 }
 .info-section-bot-right img {
-
   width: 450px; 
   border-radius: 5px;
   height: auto;
+  filter: drop-shadow(0px 5px 4px black);
 }
 
 #check-us {
