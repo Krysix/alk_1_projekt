@@ -1,84 +1,102 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id" : 1,
+      "login" : "krysix9000@gmail.com",
+      "password" : "jakieshaslo",
+      "loggedin" : "no"
+    }
+  ],
   "rooms": [
     {
       "id": 1,
-      "name": "Pokój unarny",
+      "name": "Unary room",
       "beds": 1,
       "guests": 1,
-      "price": 170
+      "price": 170,
+      "imageURL": "https://urzadzamy.smcloud.net/t/photos/t/77356/lozko-do-pokoju-dzieciecego_3351244.jpg"
     },
     {
       "id": 2,
-      "name": "Pokój binarny",
+      "name": "Binary room",
       "beds": 1,
       "guests": 2,
-      "price": 240
+      "price": 240,
+      "imageURL": "https://novodom.pl/userdata/public/gfx/11731/Lozko-tapicerowane-Acoma-malzenskie-do-sypialni-160x200-Signal.jpg"
     },
     {
       "id": 3,
-      "name": "Pokój trójkowy",
+      "name": "Ternary room",
       "beds": 2,
       "guests": 3,
-      "price": 290
+      "price": 290,
+      "imageURL": "https://lh3.googleusercontent.com/proxy/-WcPUmLqzUJdcmC8gRpHP5gGE6EmaPBEzpdCMTdvD-J5LzYw4SdFsE2yL4r0YS5-ataBszRkIc2By0qfiTihoPzeioPK_2VhZm4ZviI"
     },
     {
       "id": 4,
-      "name": "Pokój czwórkowy",
+      "name": "Quaternion room",
       "beds": 2,
       "guests": 4,
-      "price": 340
+      "price": 340,
+      "imageURL": "https://hotel-lascada.pl/wp-content/uploads/2017/01/UPS_1569.jpg"
     }
   ],
   "treatments": [
     {
       "id": 1,
-      "name": "Masaż rozgrzanym monitorem",
-      "area": "back",
+      "name": "Massage using a hot monitor",
+      "area": "Back",
       "time": 30,
-      "price": 80
+      "price": 80,
+      "imageURL": "https://cdn.pixabay.com/photo/2016/11/01/23/41/massage-1790063_960_720.jpg"
     },
     {
       "id": 2,
-      "name": "Biczowanie kablem od myszy",
-      "area": "back",
+      "name": "Flogging with mouse cable",
+      "area": "Back",
       "time": 20,
-      "price": 70
+      "price": 70,
+      "imageURL": "https://cdn.shopify.com/s/files/1/0549/2681/products/glorious_cffec201-cbc6-4c08-837f-34c0b4c2a2c4.jpg?v=1579112774"
     },
     {
       "id": 3,
-      "name": "Peeling odłamkami płyty CD",
-      "area": "face",
+      "name": "Peeling with CD broken parts",
+      "area": "Face",
       "time": 15,
-      "price": 50
+      "price": 50,
+      "imageURL": "https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/4015942/910/607/m2/fpnw/wm1/jmvvbas2k0c9hx6rdrajoyhx6dhudx4wo3lqwgq4dqujrjnrpdzxyp48hbjqerbn-.jpg?1518798682&s=05f8b6bba1f034cd8aa01bbec147b58e"
     },
     {
       "id": 4,
-      "name": "Pedicure woskiem z USB",
-      "area": "legs",
+      "name": "Pedicure with USB wax",
+      "area": "Legs",
       "time": 25,
-      "price": 100
+      "price": 100,
+      "imageURL": "https://www.mediaexpert.pl/media/cache/gallery/images/18/1825279/Kabel-USB-A-USB-B-GOTZE-JENSEN-X-Line-1.8m-front.jpg"
     },
     {
       "id": 5,
-      "name": "Manicure analogowo-cyfrowy",
-      "area": "hands",
+      "name": "Analog-digital manicure",
+      "area": "Hands",
       "time": 45,
-      "price": 150
+      "price": 150,
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTFymq8yDKeqBYh_jVjpnIQpLXJZprbVrtyuhedR5KU1hTN9xsc&usqp=CAU"
     },
     {
       "id": 6,
-      "name": "Kąpiel w gorącej kawie",
-      "area": "body",
+      "name": "Bath in hot coffe",
+      "area": "Body",
       "time": 60,
-      "price": 200
+      "price": 200,
+      "imageURL": "https://teusje.files.wordpress.com/2011/11/coffee-bath.jpg?w=584"
     },
     {
       "id": 7,
-      "name": "Depilacja dyskiem twardym",
-      "area": "body",
+      "name": "HDD depilation",
+      "area": "Body",
       "time": 45,
-      "price": 120
+      "price": 120,
+      "imageURL": "https://allegro.stati.pl//AllegroIMG/PRODUCENCI/TOSHIBA/DT01ACA300/alto/a4.jpg"
     }
   ]
 }

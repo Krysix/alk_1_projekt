@@ -16,5 +16,3 @@ router.mount(main);
 // przy uruchomieniu strony pierwszy raz
 // nawigujemy do sciezki z paska adresu 
 router.init();
-
-console.log(main);

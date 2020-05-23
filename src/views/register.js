@@ -1,14 +1,13 @@
 // register.js
 
 import $ from 'jquery';
+import {hideHomePage} from './../common/index';
+
 
 export const register = () => {
     const fragment = $(new DocumentFragment());
 
-    const h1 = $('<h1>Register</h1>');
-    const p = $('<p>Lorem ipsum...</p>');
-
-    fragment.append(h1).append(p);
+    hideHomePage();
 
     return fragment;
 };

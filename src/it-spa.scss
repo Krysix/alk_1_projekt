@@ -11,8 +11,9 @@
 //Color definition
 $main-color: #202020;
 $secondary-color: #b37436;
-$tertiary-color: #fff7f0;
-$bg-color: #ccc ;
+$logo-color: #f3962c;
+$tertiary-color: #fffefd;
+// $bg-color: #fff7f0; ;
 
 body {
   background-color: $tertiary-color ;
@@ -26,8 +27,8 @@ body {
 }
 
 .fa-compact-disc {
-  color: $secondary-color;
-  filter: drop-shadow(0px 5px 4px black);
+  color: $logo-color;
+  // filter: drop-shadow(1px 2px 4px black);
 }
 
 .navbar .navbar-brand {
@@ -77,11 +78,16 @@ body {
 
 // Image preview styling
 
-.img-prev {
+.img-prev{
   max-width:1100px;
   margin: auto;
+  margin-top: 30px;
   overflow: hidden;
-  filter: drop-shadow(0px 5px 4px black);
+  filter: drop-shadow(1px 4px 4px black);
+}
+
+.info-section img{
+  filter: drop-shadow(3px 3px 4px black);
 }
 
 .img-prev-slider {
@@ -94,7 +100,6 @@ body {
   width: 1100px; 
   border-radius: 5px;
   height: auto;
-
 }
 
 .btn {
@@ -109,6 +114,7 @@ body {
 
 #reserve{
   font-size: 2em;
+  margin-top: 30px;
   border: 1px solid $secondary-color;
   color:$secondary-color !important;
 }
@@ -145,14 +151,12 @@ body {
   width: 450px; 
   border-radius: 5px;
   height: auto;
-  filter: drop-shadow(0px 5px 4px black);
 }
 
 .info-section-mid-left img{
   width: 450px; 
   border-radius: 5px;
   height: auto;
-  filter: drop-shadow(0px 5px 4px black);
 }
 .info-section-mid-right {
   margin-right: 65px;
@@ -165,7 +169,6 @@ body {
   width: 450px; 
   border-radius: 5px;
   height: auto;
-  filter: drop-shadow(0px 5px 4px black);
 }
 
 #check-us {
@@ -199,3 +202,52 @@ body {
 .text-muted {
   text-align: center;
 }
+
+// Room/treatment component styling
+
+.pick-rt  {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.rt-image {
+  width: 450px; 
+  border-radius: 5px;
+  height: auto;
+}
+
+.rt-info ul {
+  list-style-type: none;
+  margin: 0px 150px 0 150px;
+  font-size: 1.3rem;
+}
+
+.list-group-items {
+  margin-top: 10px;
+}
+
+.rt-name {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#rt_to_cart {
+  display: block;
+  font-size: 1.3em;
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid $secondary-color;
+  color: $secondary-color;
+  color:$secondary-color !important;
+}
+
+#rt_to_cart:hover {
+  cursor:pointer;
+  @include trans();
+  color: $main-color !important;
+  background-color: $secondary-color ;
+}
+
