@@ -13,7 +13,7 @@ $main-color: #202020;
 $secondary-color: #b37436;
 $logo-color: #f3962c;
 $tertiary-color: #fffefd;
-// $bg-color: #fff7f0; ;
+$bg-color: #fff7f0; ;
 
 body {
   background-color: $tertiary-color ;
@@ -40,41 +40,45 @@ body {
 .navbar-brand:hover {
   color: $main-color !important;
 }
-
 .navbar-nav li {
     margin: auto 10px auto 10px;
 }
 
-.link {
+.link, .logoutBtn, .LoginDummy {
   padding: 10px;
   color: $main-color !important;
   border-radius: 5px;
 }
-.link:hover {
+.link:hover, .logoutBtn:hover, .LoginDummy:hover {
   cursor:pointer;
   @include trans();
   color: $main-color !important;
   background-color: $secondary-color ;
 }
 
-.navbar-nav li:nth-child(5) a {
+.navbar-nav li:nth-child(5) a, .LoginDummy {
   border: 1px solid $secondary-color;
   margin-left: 40px;
+  background-color: $bg-color ;
   color:$secondary-color !important;
 }
 .navbar-nav li:nth-child(5) a:hover {
   border: 1px solid $secondary-color;
   color: $main-color !important;
+  background-color: $secondary-color ;
 }
-.navbar-nav li:nth-child(6) a {
+.navbar-nav li:nth-child(6) a, .logoutBtn {
   margin-right: 250px;
   border: 1px solid $secondary-color;
+  background-color: $bg-color ;
   color:$secondary-color !important;
 }
-.navbar-nav li:nth-child(6) a:hover {
+.navbar-nav li:nth-child(6) a:hover, .logoutBtn:hover {
   border: 1px solid $secondary-color;
+  background-color: $secondary-color;
   color: $main-color !important;
 }
+
 
 // Image preview styling
 
@@ -250,4 +254,85 @@ body {
   color: $main-color !important;
   background-color: $secondary-color ;
 }
+
+// Register styling
+
+.container-register, .container-login {
+  width: 20%;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  margin-top:40px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.form-register, .form-login {
+  margin: 30px 30px 30px 30px;
+}
+
+.form-register h1, .form-login h1{
+  text-align: center;
+  margin: 5px;
+  padding: 1px;
+  font-size: 22px;
+}
+.form-register p, .form-login p{
+  text-align: center;
+  font-size: 15px;
+}
+
+.form-wrap p a{
+  color:rgb(59, 7, 59);
+  text-decoration: none;
+}
+.form-group {
+  color: rgb(66, 66, 66);
+  margin:7px 2px;
+  font-size: 11px;
+}
+.form-group label{
+  display: block;
+  margin: auto;
+  padding-bottom: 2px;
+}
+.form-group input{
+  border: 1px solid #e0dddd;
+  display: block;
+  margin: auto;
+  padding: 2px 1px;
+  width: 100%;
+  border-radius: 3px;
+} 
+.btn-register{
+  display: block;
+  margin: 1em 0px 0px 0px;
+  background: $secondary-color;
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 5px;
+  color: #f4f4f4;
+  margin-bottom: 10px;
+  border: 1px solid #f3f3f3;
+  width: 100%;
+}
+
+span.weak {
+  display: inline-block; /* the default for span */
+  width: 32%;
+  padding: 5px;
+  background-color: #f1caa2 ; 
+}
+span.medium {
+  display: inline-block; /* the default for span */
+  width: 32%;
+  padding: 5px;
+  background-color: #cf9d6a; 
+}
+span.strong {
+  display: inline-block; /* the default for span */
+  width: 32%;
+  padding: 5px;
+  background-color: #b37436; 
+}
+
 

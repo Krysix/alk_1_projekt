@@ -1,12 +1,17 @@
 // rooms.js
 
 import $ from 'jquery';
-import {hideHomePage} from './../common/index';
+import {hideHomePage, hideLogin} from './../common/index';
+import {hideRegister} from './../common/index';
+import {handleLogout} from './../common/index';
+
 
 export const rooms = () => {
     const fragment = $(new DocumentFragment());
 
     hideHomePage();
+    hideRegister();
+    hideLogin();
 
     const welcomeRoom = $(`<div class="pick-rt"><h1>Pick a room</h1> <br>
     <h2> Come be our guest!<h2>
@@ -57,6 +62,10 @@ export const rooms = () => {
     container.append(welcomeRoom)
 
     fragment.append(container);
+
+    $('.logoutBtn').on('click', function(e) {
+        handleLogout(e)
+    });
 
     return fragment;
 }

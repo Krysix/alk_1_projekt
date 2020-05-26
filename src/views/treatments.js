@@ -1,13 +1,17 @@
 // treatments.js
 
 import $ from 'jquery';
-import {hideHomePage} from './../common/index';
+import {hideHomePage, hideLogin} from './../common/index';
+import {hideRegister} from './../common/index';
+import {handleLogout} from './../common/index';
 
 
 export const treatments = () => {
     const fragment = $(new DocumentFragment());
 
     hideHomePage();
+    hideRegister();
+    hideLogin();
 
     const welcomeRoom = $(`<div class="pick-rt"><h1>Pick a treatment</h1> <br>
     <h2> Have a moment for yourself!<h2>
@@ -58,6 +62,10 @@ export const treatments = () => {
     container.append(welcomeRoom)
 
     fragment.append(container);
+
+    $('.logoutBtn').on('click', function(e) {
+        handleLogout(e)
+    });
 
     return fragment;
 };

@@ -5,7 +5,7 @@ import $ from 'jquery';
 // navItem otrzymuje komplente informacje o danej "ścieżce"
 export const navItem = (route) => {
     const li = $(`<li></li>`);
-    const a = $(`<a class="link">${route.name}</a>`);
+    const a = $(`<a class="link" id="link-${route.name}">${route.name}</a>`);
 
     a.on('click', (event) => {
         event.preventDefault();
