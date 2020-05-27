@@ -5,15 +5,22 @@ import { displayHomePage, hideRegister, hideLogin } from './../common/index';
 import { sliderControl } from './../common/index';
 import { keepLogin } from './../common/index';
 import { handleLogout } from './../common/index';
+import { addCart } from './../common/index';
+import { displayCart } from './../cart/index';
+
+
 
 export const home = () => {
     const fragment = $(new DocumentFragment());
 
     displayHomePage();
+    addCart();
     hideRegister();
     hideLogin();
     keepLogin();
     sliderControl();
+    displayCart();
+
 
     const checkUsBtn = $('#check-us');
     checkUsBtn.on('click', () => {
@@ -25,6 +32,7 @@ export const home = () => {
     $('.logoutBtn').on('click', function(e) {
         handleLogout(e)
     });
+
 
     return fragment;
 };

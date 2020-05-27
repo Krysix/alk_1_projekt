@@ -10,3 +10,6 @@ export * from "./hide-login";
 export * from "./handle-login";
 export * from "./keep-login";
 export * from "./logout";
+export * from "./add-cart-component";
+
+
