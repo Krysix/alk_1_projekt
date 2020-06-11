@@ -1,11 +1,11 @@
 // treatments.js
 
 import $ from 'jquery';
-import { hideHomePage, hideLogin } from './../common/index';
+import { hideHomePage, hideLogin, hideDate } from './../common/index';
 import { hideRegister } from './../common/index';
 import { handleLogout } from './../common/index';
-import { addItemToCart } from './../cart/index';
-import { addCart } from './../common/index';
+import { addTreatToCart } from './../cart/index';
+import { addCart } from './../cart/index';
 import { displayCart } from './../cart/index';
 
 export const treatments = () => {
@@ -14,6 +14,7 @@ export const treatments = () => {
     hideHomePage();
     hideRegister();
     hideLogin();
+    hideDate();
     addCart();
     displayCart();
 
@@ -31,7 +32,7 @@ export const treatments = () => {
             treatments.map((treatment) => {
 
                 const roomSection = $(`
-        <div class="card card-body mb-2"> 
+        <div class="card card-body mb-3"> 
         </div
         `);
                 const row = $(`
@@ -51,13 +52,13 @@ export const treatments = () => {
         <ul>
                 <li class="list-group-items rt-name">${treatment.name}</li>
                 <li class="list-group-items"> Area of the treatment : ${treatment.area} </li>  
-                <li class="list-group-items"> Treatment duration: ${treatment.time} min. </li>  
+                <li class=" list-group-items"> Treatment duration: ${treatment.time} min. </li>  
                 <li class="list-group-items"> Price: ${treatment.price} $</li>  
             </ul>
         `)
                 let button = $(`<button class="btn btn-to-cart" id="rt-to-cart-${treatment.id}"> ADD TO CART  </button>`)
 
-                button.on("click", addItemToCart);
+                button.on("click", addTreatToCart);
 
                 info.append(list).append(button)
 

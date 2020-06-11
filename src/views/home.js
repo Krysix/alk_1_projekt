@@ -1,11 +1,11 @@
 // home.js
 
 import $ from 'jquery';
-import { displayHomePage, hideRegister, hideLogin } from './../common/index';
+import { displayHomePage, hideRegister, hideLogin, hideDate } from './../common/index';
 import { sliderControl } from './../common/index';
 import { keepLogin } from './../common/index';
 import { handleLogout } from './../common/index';
-import { addCart } from './../common/index';
+import { addCart } from './../cart/index';
 import { displayCart } from './../cart/index';
 
 
@@ -14,6 +14,7 @@ export const home = () => {
     const fragment = $(new DocumentFragment());
 
     displayHomePage();
+    hideDate();
     addCart();
     hideRegister();
     hideLogin();
@@ -30,6 +31,7 @@ export const home = () => {
     });
 
     $('.logoutBtn').on('click', function(e) {
+        console.log('logout');
         handleLogout(e)
     });
 

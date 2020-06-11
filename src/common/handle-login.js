@@ -17,6 +17,7 @@ export function handleLogin(e) {
           passwordId = users[i].id;
           getI = i;
         };
+
       }
       if (process === true) {
         fetch(`http://localhost:3000/users/${passwordId}`, {
@@ -33,13 +34,15 @@ export function handleLogin(e) {
 
         email = '';
         password = '';
-
-        window.location.replace("http://localhost:1234/");
+        
+        window.location.replace("http://localhost:1234");
+        
       } else {
         alert("Niepoprawne dane logowania");
       }
 
     })
     .catch(error => console.log("Error ...", error));
+
   e.preventDefault();
 }

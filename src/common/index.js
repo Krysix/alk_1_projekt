@@ -10,6 +10,9 @@ export * from "./hide-login";
 export * from "./handle-login";
 export * from "./keep-login";
 export * from "./logout";
-export * from "./add-cart-component";
+export * from "./set-initial-date";
+export * from "./display-date";
+export * from "./hide-date";
+
 
 

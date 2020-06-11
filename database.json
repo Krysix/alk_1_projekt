@@ -4,7 +4,7 @@
       "id": 1,
       "email": "krysix9000@gmail.com",
       "password": "jakieshaslo",
-      "loggedin": "false"
+      "loggedin": "true"
     },
     {
       "id": "2",
@@ -56,7 +56,7 @@
   "treatments": [
     {
       "id": 1,
-      "name": "Massage using a hot monitor",
+      "name": "Monitor massage",
       "area": "Back",
       "time": 30,
       "price": 80,
@@ -64,7 +64,7 @@
     },
     {
       "id": 2,
-      "name": "Flogging with mouse cable",
+      "name": "Cable flogging",
       "area": "Back",
       "time": 20,
       "price": 70,
@@ -72,7 +72,7 @@
     },
     {
       "id": 3,
-      "name": "Peeling with CD broken parts",
+      "name": "CD peeling",
       "area": "Face",
       "time": 15,
       "price": 50,
@@ -80,7 +80,7 @@
     },
     {
       "id": 4,
-      "name": "Pedicure with USB wax",
+      "name": "USB wax pedicure",
       "area": "Legs",
       "time": 25,
       "price": 100,
@@ -88,7 +88,7 @@
     },
     {
       "id": 5,
-      "name": "Analog-digital manicure",
+      "name": "A/D manicure",
       "area": "Hands",
       "time": 45,
       "price": 150,
@@ -96,7 +96,7 @@
     },
     {
       "id": 6,
-      "name": "Bath in hot coffe",
+      "name": "Coffe bath",
       "area": "Body",
       "time": 60,
       "price": 200,

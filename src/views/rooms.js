@@ -1,11 +1,11 @@
 // rooms.js
 
 import $ from 'jquery';
-import { hideHomePage, hideLogin } from './../common/index';
+import { hideHomePage, hideLogin, hideDate } from './../common/index';
 import { hideRegister } from './../common/index';
 import { handleLogout } from './../common/index';
-import { addCart } from './../common/index';
-import { addItemToCart } from './../cart/index';
+import { addCart } from './../cart/index';
+import { addRoomToCart } from './../cart/index';
 import { displayCart } from './../cart/index';
 
 
@@ -16,6 +16,7 @@ export const rooms = () => {
     hideHomePage();
     hideRegister();
     hideLogin();
+    hideDate();
     addCart();
     displayCart();
 
@@ -33,7 +34,7 @@ export const rooms = () => {
             rooms.map((room) => {
 
                 const roomSection = $(`
-        <div class="card card-body mb-2"> 
+        <div class="card card-body mb-3"> 
         </div
         `);
                 const row = $(`
@@ -59,11 +60,9 @@ export const rooms = () => {
         `)
                 let button = $(`<button class="btn btn-to-cart" id="rt-to-cart-${room.id}"> ADD TO CART  </button>`)
 
-                button.on("click", addItemToCart);
+                button.on("click", addRoomToCart);
 
                 info.append(list).append(button)
-
-
 
                 row.append(image).append(info);
                 roomSection.append(row);

@@ -5,8 +5,8 @@ import { displayCart } from "./index";
 export const removeCartItem = (e) => {
   // Define a new cart
   let cart = new Cart();
-  let cartItem = $(e.target).parent().parent().find("span").eq(0).text();
-
+  let item = $(e.target).parent().parent().find("span").eq(0).text();
+  let cartItem = item.substring(0,item.length - 1)
   cart.remove({
     name: cartItem
   });

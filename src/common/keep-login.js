@@ -12,6 +12,7 @@ export function keepLogin() {
         if (users[i].loggedin === 'true') {
           process = true;
           getI = i;
+          $('.btn-to-buy').prop("disabled", false);
         };
       }
       if(process === true) {

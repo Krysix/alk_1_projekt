@@ -1,13 +1,11 @@
 // login.js
 
 import $ from 'jquery';
-import { hideHomePage, hideRegister } from './../common/index';
+import { hideHomePage, hideRegister, hideDate } from './../common/index';
 import { displayLogin } from './../common/index';
 import { handleLogin } from './../common/index';
-import { addCart } from './../common/index';
+import { addCart } from './../cart/index';
 import { displayCart } from './../cart/index';
-
-
 
 
 export const login = () => {
@@ -15,6 +13,7 @@ export const login = () => {
 
     hideHomePage();
     hideRegister();
+    hideDate();
     addCart();
     displayCart();
     displayLogin();
@@ -23,7 +22,7 @@ export const login = () => {
     $('#signin').on('click', function(e) {
         handleLogin(e);
     });
-    
+
 
     return fragment;
 };
