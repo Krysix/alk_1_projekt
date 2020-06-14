@@ -27,7 +27,6 @@ export function handleLogout(e) {
           })
 
         });
-
         window.location.replace("http://localhost:1234/");
       } 
     })

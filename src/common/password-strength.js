@@ -22,12 +22,26 @@ export function passStrength(){
     }
     i++;
   }
+
+  if(inputP.val().length>=12) {
+    $('#checkbox-3').css('color', "#b37436")
+  };
+
+  if(upperCasePresent >= 1) {
+    $('#checkbox-1').css('color', "#b37436")
+  };
+
+  if(numberPresent > 1) {
+    $('#checkbox-2').css('color', "#b37436")
+  };
+
     
   if(inputP.val().length===0){
     $('.weak').hide();
     $('.medium').hide();
     $('.strong').hide();
     $('#strength-text').hide();
+    $("#signup").attr("disabled", true);
 
     }else if(inputP.val().length < 6){
       $('.weak').show(); 

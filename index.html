@@ -7,14 +7,14 @@
 </head>
 <body>
   <main>
-</main>
+  </main>
 
     <div class="img-prev">
         <div class="img-prev-slider">
-            <img src='https://i.picsum.photos/id/1060/5598/3732.jpg'>
-            <img src='https://i.picsum.photos/id/2/5616/3744.jpg'>
-            <img src='https://i.picsum.photos/id/1051/4928/3264.jpg'>
-            <img src='https://i.picsum.photos/id/366/4000/3000.jpg'>
+            <img src='https://i.picsum.photos/id/1060/5598/3732.jpg?hmac=31kU0jp5ejnPTdEt-8tAXU5sE-buU-y1W1qk_BsiUC8'>
+            <img src='https://i.picsum.photos/id/180/2400/1600.jpg?hmac=Ig-CXcpNdmh51k3kXpNqNqcDYTwXCIaonYiBOnLXBb8'>
+            <img src='https://i.picsum.photos/id/2/5616/3744.jpg?hmac=l1XcSPFigtRLcO2F6Li-t17EIeylkWH94Oowb4vzApk'>
+            <img src='https://i.picsum.photos/id/366/4000/3000.jpg?hmac=zphhHOH9ofToN2jNHd8z-nc98NrBd8y2okWXEXetLDg'>
         </div>
     </div>
   
@@ -41,13 +41,13 @@
         </div>
 
         <div class="info-section-top-right">
-            <img src='https://i.picsum.photos/id/2/5616/3744.jpg' id="first-info-image">
+            <img src='https://i.picsum.photos/id/431/5398/3599.jpg?hmac=bc325kFqsm626RGhgs-XwG_GFqd4x3VmXtramO12qL8' id="first-info-image">
         </div>
     </div>
 
     <div class="info-section"> 
         <div class="info-section-mid-left">
-            <img src='https://i.picsum.photos/id/1051/4928/3264.jpg' id="first-info-image">
+            <img src='https://i.picsum.photos/id/370/4928/3264.jpg?hmac=UGe0txSnG4hhV-fAoi7e3mTnvQFhYYNcPJJbYFePh5Q' id="first-info-image">
         </div>
 
         <div class="info-section-mid-right">
@@ -66,7 +66,7 @@
         </div>
 
         <div class="info-section-bot-right">
-            <img src='https://i.picsum.photos/id/366/4000/3000.jpg' id="first-info-image">
+            <img src='https://i.picsum.photos/id/4/5616/3744.jpg?hmac=8wIoVTScZoSiagRtRYlNfcd7dYHEf9tGyyEF44ihYFI' id="first-info-image">
         </div>
     </div>
     <button class="btn" id="reserve"> MAKE A RESERVATION </button>
@@ -87,6 +87,20 @@
                 <label for="password">Password</label> 
                 <input type="password" style="-webkit-text-security: square;" id="password" name="password" placeholder='&nbsp'>
             </div>
+            <div class="requirements">
+                <span>
+                    <i id="checkbox-1" class="fas fa-check-square"></i> 1 capital
+                </span>
+                <span>
+                    <i id="checkbox-2" class="fas fa-check-square"></i> 1 number 
+                </span>
+                <span>
+                    <i id="checkbox-3" class="fas fa-check-square"></i> 12 letters 
+                </span>
+ 
+                
+            </div>
+
             <div class="meter-group">
                 <span class="weak"> </span>
                 <span class="medium"></span>
@@ -99,11 +113,12 @@
         </div>
     </div>
 
+    <div class='login-body'>
     <div class='container-login'>
         <div class="form-login">
 
             <h1>Please Log In</h1>
-            <p>To start to relax</p>
+            <p>To start Your relax</p>
             <form>
 
             <div class="form-group">
@@ -121,8 +136,13 @@
             
         </div>
     </div>
+    </div>
 
-    <div class="container container-booking"> 
+    <div class="booking-card container">
+    <div class="pick-rt">   
+        <h2>And finally pick a date <i class="fas fa fa-calendar icon-large"></i> </h2> 
+    </div>
+    <div class="container-booking card"> 
         <div class="row"> 
           <div class="col-md-6"> 
           <img src='https://www.wrike.com/blog/content/uploads/2017/05/rawpixel-633847-unsplash.jpg' id="calendar-image">
@@ -130,7 +150,7 @@
 
           <div class="col-md-6" id="dateInput">
             <div id="pickDate">
-            <h2> Pick a date <br> of <span id="yourVisit">Your visit </span> </h2>
+            <h2> Book date  <br>of <span id="yourVisit">Your </span> visit </h2>
             </div>
               
             <div class="inputDate">
@@ -155,11 +175,26 @@
           </div>
         </div>
     </div>
+    </div>
+
+    <div class="modal-bg">
+        <div class="modal">
+            <h4 id="alert">We've got Your order! See You soon.</h4>
+            <button id="alertbutton" class="btn modal-btn">Ok</button>
+        </div>
+    </div>
 
 
 
-  <footer class="footer text-muted">Copyright © IT SPA. All rights reserved.</footer>
+    <footer class="footer text-muted">Copyright © IT SPA. All rights reserved.</footer>
 
-  <script src="https://kit.fontawesome.com/146c75a86c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/146c75a86c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init("user_ns7iHh78yO9LtgyLwZeVS");
+    })();
+    </script>
+
   <script src="src/it-spa.js"></script>
 </body>

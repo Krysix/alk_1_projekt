@@ -1,5 +1,6 @@
 
 import $ from "jquery";
+import { modalText } from "../common/index";
 
 export function handleLogin(e) {
   let email = $('#emailL').val();
@@ -32,13 +33,15 @@ export function handleLogin(e) {
 
         });
 
-        email = '';
-        password = '';
+        $('#emailL').val('');
+        $('#passwordL').val('');
         
         window.location.replace("http://localhost:1234");
         
       } else {
-        alert("Niepoprawne dane logowania");
+        modalText("Wrong login or password");
+        $('#emailL').val('') ;
+        $('#passwordL').val('');
       }
 
     })

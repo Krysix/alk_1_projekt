@@ -18,8 +18,9 @@ export const treatments = () => {
     addCart();
     displayCart();
 
-    const welcomeRoom = $(`<div class="pick-rt"><h1>Pick a treatment</h1> <br>
-    <h2> Have a moment for yourself!<h2>
+    const welcomeRoom = $(`
+    <div class="pick-rt"> <h2>Pick a treatment <i class="fas fa-spa icon-large"></i></h2> 
+        
     </div>`);
 
     const container = $(`<div class='container'></div>`)

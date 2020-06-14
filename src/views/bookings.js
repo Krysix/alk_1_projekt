@@ -24,7 +24,11 @@ export const bookings = () => {
 
     $('#days-to-cart').on('click', function(e) {
         let days = $('#visitDays').text();
+        let arrival = $('#arrival').val();
+        let departure = $('#departure').val()
         localStorage.setItem('days', days);
+        localStorage.setItem('arrival', arrival);
+        localStorage.setItem('departure', departure);
         displayCart();
     });
 

@@ -20,9 +20,10 @@ export const rooms = () => {
     addCart();
     displayCart();
 
-    const welcomeRoom = $(`<div class="pick-rt"><h1>Pick a room</h1> <br>
-    <h2> Come be our guest!<h2>
-    </div>`);
+    const welcomeRoom = $(`
+    <div class="pick-rt"><h2>Pick a room <i class="fas fa-laptop-house icon-large"></i> </h2> 
+    </div>
+    `);
 
     const container = $(`<div class='container'></div>`)
 

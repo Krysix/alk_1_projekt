@@ -42,5 +42,5 @@ export function displayDate() {
 
 
 
-  $('.container-booking').show();
+  $('.booking-card').show();
 }

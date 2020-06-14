@@ -1,5 +1,6 @@
 
 import $ from "jquery";
+import modalText from "./index";
 
 export function handleRegister(e) {
   let email = $('#email').val();
@@ -27,7 +28,7 @@ export function handleRegister(e) {
           })
         });
       } else {
-        alert('Email is already registered')
+        modalText('Email is already registered');
       }
 
     })

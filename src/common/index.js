@@ -13,6 +13,8 @@ export * from "./logout";
 export * from "./set-initial-date";
 export * from "./display-date";
 export * from "./hide-date";
+export * from "./modal";
+export * from "./jump-to-rooms";
 
 
 

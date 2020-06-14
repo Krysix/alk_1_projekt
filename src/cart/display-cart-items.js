@@ -2,6 +2,7 @@ import $ from "jquery";
 import { Cart } from "./index";
 import { removeCartItem } from "./index";
 import { cartItemNumber } from "./index";
+import { sendOrder } from "./index";
 
 export const displayCart = () => {
   // Define a new cart
@@ -14,6 +15,7 @@ export const displayCart = () => {
   $(".price-tag").empty();
   let sumPrice = 0;
   let days = localStorage.getItem('days');
+
 
   for(let i = 0; i< cartCookies.length; i++) {
     let priceNumber = cartCookies[i].price
@@ -29,7 +31,7 @@ export const displayCart = () => {
         <span class="remove-btn"> <i class="fas fa-trash-alt"></i></span>
       </li>
       `);
-      sumPrice = sumPrice + (noDolarSign * days);
+      sumPrice = sumPrice + (noDolarSign * days[0]);
 
     } else {
       $(".treat-list").append(`
@@ -45,12 +47,21 @@ export const displayCart = () => {
     }
   };
 
+  if($(".room-list li").length < 1){
+    $(".days-tag span").hide()
+  }else {
+    $(".days-tag span").show()
     $(".days-tag span").text(`x ${days} days`);
-
+  };
 
   let button = $(".remove-btn");
   button.on('click', function (e) {
     removeCartItem(e);
+  });
+
+  let sendMail = $(".btn-to-buy");
+  sendMail.on('click', function (e) {
+    sendOrder(e);
   });
 
 

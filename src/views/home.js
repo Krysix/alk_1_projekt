@@ -5,6 +5,7 @@ import { displayHomePage, hideRegister, hideLogin, hideDate } from './../common/
 import { sliderControl } from './../common/index';
 import { keepLogin } from './../common/index';
 import { handleLogout } from './../common/index';
+import { jumpToRooms } from './../common/index';
 import { addCart } from './../cart/index';
 import { displayCart } from './../cart/index';
 
@@ -31,8 +32,11 @@ export const home = () => {
     });
 
     $('.logoutBtn').on('click', function(e) {
-        console.log('logout');
         handleLogout(e)
+    });
+
+    $('#reserve').on('click', function() {
+        jumpToRooms()
     });
 
 

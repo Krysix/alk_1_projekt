@@ -15,6 +15,10 @@ $logo-color: #f3962c;
 $tertiary-color: #fffefd;
 $bg-color: #fff7f0; 
 
+body {
+  background-image: linear-gradient(to bottom, #fcf8f4, #f7e4cf);
+  background-repeat: no-repeat;
+}
 
 //Navbard styling
 .navbar {
@@ -26,7 +30,6 @@ $bg-color: #fff7f0;
 
 .fa-compact-disc {
   color: $logo-color;
-  // filter: drop-shadow(1px 2px 4px black);
 }
 
 .navbar .navbar-brand {
@@ -49,7 +52,7 @@ $bg-color: #fff7f0;
 
 .link, .logoutBtn, .LoginDummy {
   padding: 10px;
-  color: $main-color !important;
+  // color: $main-color !important;
   border-radius: 5px;
 }
 .link:hover, .logoutBtn:hover, .LoginDummy:hover {
@@ -297,16 +300,16 @@ $bg-color: #fff7f0;
 }
 
 
-// Footer styling
+// // Footer styling
 // .footer {
-//   position: absolute;
+//   position: flex;
 //   bottom: 0px;
 //   width: 100%;
-//   height: 60px;
-//   line-height: 60px;
+//   height: 30px;
+//   line-height: 30px;
 //   background-color: #f5f5f5;
-
 // }
+
 .text-muted {
   text-align: center;
 }
@@ -318,8 +321,21 @@ $bg-color: #fff7f0;
 
 .pick-rt  {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    margin-top: 8px;
+  }
+}
+
+.fa-laptop-house{
+  margin-left: 10px;
+}
+.fa-spa{
+  margin-left: 10px;
 }
 
 .rt-image {
@@ -351,7 +367,6 @@ $bg-color: #fff7f0;
   margin-left: auto;
   margin-right: auto;
   border: 1px solid $secondary-color;
-  color: $secondary-color;
   color:$secondary-color !important;
 }
 
@@ -367,6 +382,7 @@ $bg-color: #fff7f0;
 .container-booking {
   text-align: center;
   margin-top: 40px;
+  margin-bottom: 330px;
 }
 
 #calendar-image {
@@ -394,17 +410,24 @@ $bg-color: #fff7f0;
 #days-to-cart {
   margin-top: 15px;
 }
+#yourVisit {
+  color: $secondary-color
+}
 
 
 // Register styling
+.login-body {
+  height: 100%;
+}
 
 .container-register, .container-login {
   width: 20%;
   border: 1px solid $secondary-color;
   border-radius: 5px;
-  margin-top:40px;
+  margin-top:50px;
   margin-left:auto;
   margin-right:auto;
+  margin-bottom:30%;
 }
 
 .form-register, .form-login {
@@ -456,6 +479,17 @@ $bg-color: #fff7f0;
   border: 1px solid #f3f3f3;
   width: 100%;
 }
+.requirements{
+  text-align: center;
+  align-content: space-between;
+  span {
+    margin: 10px;
+  };
+
+  i {
+    color: gray;
+  }
+}
 
 span.weak {
   display: inline-block; /* the default for span */
@@ -474,6 +508,62 @@ span.strong {
   width: 32%;
   padding: 5px;
   background-color: #b37436; 
+}
+
+// Modal styling
+.modal-bg{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  visibility: hidden;
+  z-index: 1000000;
+  opacity: 0;
+  position: 3;
+  @include trans();
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  width: 25%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  h4 {
+    margin-bottom: 0px;
+  }
+}
+
+.modal-btn {
+  display: block;
+  font-size: 1.1em;
+  width: 70px;
+  border: 1px solid $secondary-color;
+  margin: 0px;
+  color:$secondary-color;
+}
+
+.modal-btn:hover {
+  cursor:pointer;
+  @include trans();
+  color: $main-color !important;
+  background-color: $secondary-color ;
 }
 
 
