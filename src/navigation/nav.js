@@ -18,8 +18,27 @@ export const nav = () => {
     const navBarItems = routes.map(route => navItem(route));
     
     navBar.find('ul').append(navBarItems);
+    
 
-    fragment.append(navBar);
+    const hamburger = $(`
+    <li class="hamburger">
+        <div class="dropdown dropleft">
+            <button class="hamburgerButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bars"></i> 
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Home</a>
+                <a class="dropdown-item" href="rooms">Rooms</a>
+                <a class="dropdown-item" href="treatments">Treatments</a>
+                <a class="dropdown-item" href="bookings">Bookings</a>
+            </div>
+        </div>
+    </li>
+    `);
+
+    navBar.find('ul').last().append(hamburger);
+
+    fragment.append(navBar)
 
     return fragment;
 };

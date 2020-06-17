@@ -2,7 +2,7 @@ import $ from "jquery";
 
 export function addCart() {
 
-  if($('.navbar-nav li').length < 7) {
+  if($('.navbar-nav').children().length < 8) {
     $('.navbar-nav').append(`
     <li> 
       <div class="cart-dropdown"> 

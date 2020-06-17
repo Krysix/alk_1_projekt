@@ -39,7 +39,6 @@ export const home = () => {
         jumpToRooms()
     });
 
-
     return fragment;
 };
 

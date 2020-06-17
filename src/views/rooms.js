@@ -44,12 +44,12 @@ export const rooms = () => {
         `);
 
                 let image = $(`
-        <div class="col-md-5" id="roomPicture_${room.id}"> 
-            <img class="rt-image" src='${room.imageURL}'>
+        <div class="rt-image" id="roomPicture_${room.id}"> 
+            <img class="rt-img" src='${room.imageURL}'>
         </div>`);
 
                 let info = $(`
-        <div class="col-md-7 rt-info" id="roomInfo_${room.id}"></div>`)
+        <div class="rt-info" id="roomInfo_${room.id}"></div>`)
 
                 let list = $(`
         <ul>

@@ -42,12 +42,12 @@ export const treatments = () => {
         `);
 
                 let image = $(`
-        <div class="col-md-5" id="treatmentPicture_${treatment.id}"> 
-            <img class="rt-image" src='${treatment.imageURL}'>
+        <div class="rt-image" id="treatmentPicture_${treatment.id}"> 
+            <img class="rt-img" src='${treatment.imageURL}'>
         </div>`);
 
                 let info = $(`
-        <div class="col-md-7 rt-info" id="treatmentInfo_${treatment.id}"></div>`);
+        <div class="rt-info" id="treatmentInfo_${treatment.id}"></div>`);
 
                 let list = $(`    
         <ul>

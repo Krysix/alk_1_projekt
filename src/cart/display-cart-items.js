@@ -48,11 +48,15 @@ export const displayCart = () => {
   };
 
   if($(".room-list li").length < 1){
-    $(".days-tag span").hide()
+    $(".days-tag span").hide();
+    $("#cart-number").hide();
   }else {
-    $(".days-tag span").show()
+    $("#cart-number").show();
+    $(".days-tag span").show();
     $(".days-tag span").text(`x ${days} days`);
   };
+
+
 
   let button = $(".remove-btn");
   button.on('click', function (e) {

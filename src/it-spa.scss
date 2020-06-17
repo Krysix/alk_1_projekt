@@ -16,7 +16,7 @@ $tertiary-color: #fffefd;
 $bg-color: #fff7f0; 
 
 body {
-  background-image: linear-gradient(to bottom, #fcf8f4, #f7e4cf);
+  background-image: linear-gradient(to bottom, #fcf8f4, #f0d4b4);
   background-repeat: no-repeat;
 }
 
@@ -32,8 +32,12 @@ body {
   color: $logo-color;
 }
 
+.hamburger {
+  display: none;
+}
+
 .navbar .navbar-brand {
-  color: black;
+  color: $main-color;
   font-weight: bolder;
   font-size: 1.5em;
   margin: auto 0px auto 10%;
@@ -47,7 +51,7 @@ body {
 }
 
 .navbar-nav li {
-  margin: auto 10px auto 10px;
+  margin: auto 5px auto 5px;
 }
 
 .link, .logoutBtn, .LoginDummy {
@@ -64,7 +68,7 @@ body {
 
 .navbar-nav li:nth-child(5) a, .LoginDummy {
   border: 1px solid $secondary-color;
-  margin-left: 60px;
+  margin-left: 30px;
   background-color: $bg-color ;
   color:$secondary-color !important;
 }
@@ -114,11 +118,11 @@ body {
   background-color: $tertiary-color;
   min-width: 500px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
-  z-index: 1;
+  z-index: 9999;
 }
 
 .cart-content li {
-  color: black;
+  color: $main-color;
   border-bottom: 1px solid #ddd;
   padding: 12px 16px;
   text-decoration: none;
@@ -338,10 +342,11 @@ body {
   margin-left: 10px;
 }
 
-.rt-image {
+.rt-img {
   width: 450px; 
   border-radius: 5px;
   height: auto;
+  margin-left: 15px;
 }
 
 .rt-info ul {
@@ -389,7 +394,7 @@ body {
   width: 500px; 
   border-radius: 5px;
   height: auto;
-  margin: 40px 0px 40px 0px;
+  margin: 40px 90px 40px 50px;
   border-radius: 5px;
   box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.3);
 }
@@ -404,7 +409,10 @@ body {
   justify-content: space-between;
   text-align: left;
   line-height: 26px;
-  margin: 30px 70px 30px 70px;
+  margin: 30px 60px 30px 60px;
+    label {
+      margin-right: 20px;
+    }
   }
 
 #days-to-cart {
@@ -445,10 +453,11 @@ body {
   font-size: 15px;
 }
 
-.form-wrap p a{
-  color:rgb(59, 7, 59);
-  text-decoration: none;
-}
+// .form-wrap p a{
+//   color:rgb(59, 7, 59);
+//   text-decoration: none;
+// }
+
 .form-group {
   color: rgb(66, 66, 66);
   margin:7px 2px;
@@ -566,4 +575,269 @@ span.strong {
   background-color: $secondary-color ;
 }
 
+@media only screen and (max-width: 1380px) {
+  
+  .navbar .navbar-brand {
+    margin: auto 10px auto 6%;
+  }
+  .navbar-nav {
+    margin-right: 6%;
+  }
 
+  .cart-content {
+    right: -50%;
+    min-width: 450px;
+  }
+  .container-register, .container-login {
+    width: 30%;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+
+  .navbar-nav > li:nth-child(-n+4) {
+    display: none;
+  }
+
+  .hamburger {
+    float: right;
+    display: block;
+    .hamburgerButton {
+      border: none;
+      background-color: transparent;
+    }
+    .fa-bars {
+      color: $secondary-color;
+      width: 40px;
+    }
+  }
+
+  .dropdown-item:hover {
+    @include trans();
+    background-color: $secondary-color;
+    color: $main-color;
+    border-radius: 5px;
+  }
+
+  .dropleft .dropdown-menu {
+    min-width: 12rem;
+    top: 45px;
+    right: 0%;
+    left: auto;
+  }
+  
+  .img-prev{
+    max-width:800px;
+  }
+
+  .img-prev-slider {
+    height: 400px;
+  
+  }
+  .img-prev-slider img {
+    width: 800px; 
+  }
+
+  .info-section {
+    max-width:1000px;
+    flex-direction: column;
+
+  }
+  
+  .info-section-top-left{
+    margin-left: 0px;
+    margin-top: 20px;
+    order:2;
+  }
+  .info-section-top-right img {
+    width: 450px; 
+    border-radius: 5px;
+    height: auto;
+  }
+  
+  .info-section-mid-left img{
+    width: 450px; 
+    border-radius: 5px;
+    height: auto;
+  }
+  .info-section-mid-right {
+    margin-right: 0px;
+    margin-top: 20px;
+  }
+  
+  .info-section-bot-left {
+    margin-left: 0px;
+    margin-top: 20px;
+    order: 2;
+  }
+  .info-section-bot-right img {
+    width: 450px; 
+    border-radius: 5px;
+    height: auto;
+  }
+
+  #calendar-image {
+    width: 500px; 
+    height: auto;
+    margin: 40px 0px 40px 0px;
+  }
+
+  .cal-input {
+    margin: 0px 100px 20px 100px;
+    }
+
+  .container-register, .container-login {
+    width: 30%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+  
+  .fa-laptop-house{
+    margin-left: 10px;
+  }
+  .fa-spa{
+    margin-left: 10px;
+  }
+  
+  .rt-img {
+    width: 450px; 
+    margin: 0px;
+    border-radius: 5px;
+    height: auto;
+  }
+
+  .rt-image {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .rt-info ul {
+    list-style-type: none;
+    font-size: 1.7rem;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .list-group-items {
+    margin: 10px auto 0px auto;
+    width: 500px;
+    font-size: 1.2rem;
+    display: block;
+  }
+  
+  .rt-name {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {
+  
+  .container-register, .container-login {
+    width: 40%;
+  }
+
+  .img-prev{
+    max-width:700px;
+  }
+
+  .img-prev-slider {
+    height: 400px;
+  
+  }
+  .img-prev-slider img {
+    width: 700px; 
+  }
+
+  .info-section {
+    max-width:1000px;
+    flex-direction: column;
+  }
+  
+  .info-section-top-left{
+    margin-left: 0px;
+    margin-top: 20px;
+    order:2;
+  }
+  .info-section-top-right img {
+    width: 450px; 
+    border-radius: 5px;
+    height: auto;
+  }
+  
+  .info-section-mid-left img{
+    width: 450px; 
+    border-radius: 5px;
+    height: auto;
+  }
+  .info-section-mid-right {
+    margin-right: 0px;
+    margin-top: 20px;
+  }
+  
+  .info-section-bot-left {
+    margin-left: 0px;
+    margin-top: 20px;
+    order: 2;
+  }
+  .info-section-bot-right img {
+    width: 450px; 
+    border-radius: 5px;
+    height: auto;
+  }
+
+  #calendar-image {
+    width: 400px; 
+    height: auto;
+    margin: 40px 0px 40px 0px;
+  }
+
+  .rt-img {
+    width: 450px; 
+    margin: 0px;
+    border-radius: 5px;
+    height: auto;
+  }
+
+  .rt-image {
+    margin: 0px auto 0px auto;
+    display: block;
+  }
+  
+  .rt-info ul {
+    list-style-type: none;
+    margin: 0px auto 0px auto;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  
+  .list-group-items {
+    margin: 10px auto 0px auto;
+    width: 500px;
+    font-size: 1.2rem;
+    display: block;
+  }
+  
+  .rt-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar .navbar-brand {
+    margin: auto 10px auto 2%;
+  }
+  .navbar-nav {
+    margin-right: 2%;
+    font-size: 1.2rem;
+  }
+
+  .container-register, .container-login {
+    width: 50%;
+  }
+}
