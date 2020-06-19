@@ -1,3 +1,4 @@
+// Function for handling registering
 
 import $ from "jquery";
 import modalText from "./index";
@@ -7,7 +8,8 @@ export function handleRegister(e) {
   let password = $('#password').val();
   let newUser = true;
 
-  fetch(`http://localhost:3000/users`)
+  // Checking if input email is new user
+  fetch(`https://alk-fake-api.herokuapp.com/users`)
     .then((response) => response.json())
     .then((users) => {
       for (let i = 0; i < users.length; i++) {
@@ -15,9 +17,10 @@ export function handleRegister(e) {
           newUser = false;
         }
       }
-    
+      
+      // Adding new user to the datebase
       if (newUser === true) {
-        fetch(`http://localhost:3000/users`, {
+        fetch(`https://alk-fake-api.herokuapp.com/users`, {
           method: 'POST',
           headers: { 'Content-type': 'application/json' },
           body: JSON.stringify({
@@ -28,6 +31,7 @@ export function handleRegister(e) {
           })
         });
       } else {
+        // Displaying modal message
         modalText('Email is already registered');
       }
 

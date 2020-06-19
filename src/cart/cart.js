@@ -1,4 +1,4 @@
-// cart.js
+// Creating Cart class
 
 export class Cart {
 
@@ -12,7 +12,7 @@ export class Cart {
 
   get() {
       const cookies = document.cookie.split(';');
-      // zwraca ciag znakow ("IT_SPA_CART=wartosc") lub undefined
+      // Returns ("IT_SPA_CART=variable") or undefined
       return cookies.find(cookie => cookie.startsWith(this.key));
   }
 
@@ -33,15 +33,13 @@ export class Cart {
       document.cookie = `${this.key}=${stringifiedValue}`;
   }
 
-  // WAŻNE: zakładając, że koszyk jest tablicą
+  // Adding item to the cart
   add(item) {
-      // dodaje produkt do koszyka
       const cartValue = this.getItSpaCart();
       this.setItSpaCart([...cartValue, item]);
   }
-
+  // Removing item from the cart
   remove(item) {
-      // usuwa produkt z koszyka
       const cartValue = this.getItSpaCart();
       const itemInCart = cartValue.findIndex(
                               val => val.name === item.name

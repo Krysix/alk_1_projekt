@@ -1,3 +1,5 @@
+// HTML element for cart component
+
 import $ from "jquery";
 
 export function addCart() {

@@ -1,4 +1,4 @@
-// home.js
+// Function for displaying main page of the website.
 
 import $ from 'jquery';
 import { displayHomePage, hideRegister, hideLogin, hideDate } from './../common/index';
@@ -14,6 +14,7 @@ import { displayCart } from './../cart/index';
 export const home = () => {
     const fragment = $(new DocumentFragment());
 
+    // Hiding and displaying related elements on the page
     displayHomePage();
     hideDate();
     addCart();
@@ -23,7 +24,7 @@ export const home = () => {
     sliderControl();
     displayCart();
 
-
+    // Adding slide down animation when clicking "check us" button
     const checkUsBtn = $('#check-us');
     checkUsBtn.on('click', () => {
         $([document.documentElement, document.body]).animate({
@@ -31,10 +32,12 @@ export const home = () => {
         }, 1000);
     });
 
+    // Adding logout functionality to the page
     $('.logoutBtn').on('click', function(e) {
-        handleLogout(e)
+        handleLogout(e);
+        e.preventDefault();
     });
-
+    // Jumping to another path after clicking "Make a reservation" button
     $('#reserve').on('click', function() {
         jumpToRooms()
     });

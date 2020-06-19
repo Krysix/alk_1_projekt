@@ -1,4 +1,4 @@
-// oops.js
+// Function for displaying page content if something goes wrong with pathing
 
 import $ from 'jquery';
 

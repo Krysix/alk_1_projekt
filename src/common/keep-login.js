@@ -1,11 +1,15 @@
+// Function for keeping displaying login user through all pages
 
 import $ from "jquery";
 
 export function keepLogin() {
+
+  // Setting initial parameters
   let process = false;
   let getI;
 
-  fetch(`http://localhost:3000/users`)
+  // Looking for loggedin = true; parameter. If found enable "Go to payment" option.
+  fetch(`https://alk-fake-api.herokuapp.com/users`)
     .then((response) => response.json())
     .then((users) => {
       for (let i = 0; i < users.length; i++) {
@@ -15,6 +19,8 @@ export function keepLogin() {
           $('.btn-to-buy').prop("disabled", false);
         };
       }
+
+      // Append new buttons to the navbar with login email and logout option.
       if(process === true) {
         
         if($('#link-Login').length) {

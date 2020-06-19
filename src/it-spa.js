@@ -10,9 +10,8 @@ const router = new Router(routes);
 
 main.before(nav);
 
-// element main bedzie "outletem" na nasze widoki
+// Element main will be an outletem to the views
 router.mount(main);
 
-// przy uruchomieniu strony pierwszy raz
-// nawigujemy do sciezki z paska adresu 
+// After navigating to the website we will go to the specified path
 router.init();

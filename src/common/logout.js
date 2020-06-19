@@ -1,3 +1,5 @@
+// Function enebling logout functionality throught Log out button
+
 import $ from "jquery";
 
 export function handleLogout(e) {
@@ -5,7 +7,8 @@ export function handleLogout(e) {
   let process = false;
   let getI = 0;
 
-  fetch(`http://localhost:3000/users`)
+  // Looking for user who is logged in
+  fetch(`https://alk-fake-api.herokuapp.com/users`)
     .then((response) => response.json())
     .then((users) => {
       for (let i = 0; i < users.length; i++) {
@@ -15,8 +18,10 @@ export function handleLogout(e) {
           getI = i;
         };
       }
+
+      // Removing logged in status from particular user
       if (process === true) {
-        fetch(`http://localhost:3000/users/${passwordId}`, {
+        fetch(`https://alk-fake-api.herokuapp.com/users${passwordId}`, {
           method: 'PUT',
           headers: { 'Content-type': 'application/json' },
           body: JSON.stringify({
@@ -27,6 +32,8 @@ export function handleLogout(e) {
           })
 
         });
+
+        // After logous change window to home
         window.location.replace("http://localhost:1234/");
       } 
     })

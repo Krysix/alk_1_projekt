@@ -1,5 +1,5 @@
-// odwolujac sie do katalogu z "beczka" (index.js -- barrel)
-// mozna pisac krotsze importy
+// Function adding all paths with their respective components, imported from views folder.
+
 import { home, rooms, treatments, bookings, login, register } from '../views';
 
 export const routes = [

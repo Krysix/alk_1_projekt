@@ -1,3 +1,6 @@
+// Adding modal which takes inside text as parameter
+// To hide modal clicking ok is required
+
 import $ from "jquery";
 
 export function modalText(text) {

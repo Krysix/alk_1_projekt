@@ -1,4 +1,4 @@
-// funkcja do ukrycia zawartości strony głównej
+// Function for hiding main page content
 
 import $ from "jquery";
 

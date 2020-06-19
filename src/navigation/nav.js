@@ -1,4 +1,4 @@
-// nav.js
+// Function adding html elents to navbar.
 
 import $ from 'jquery';
 import { routes } from '../router';
@@ -7,6 +7,7 @@ import { navItem } from './nav-item';
 export const nav = () => {
     const fragment = $(new DocumentFragment());
 
+    // Navbar html
     const navBar = $(`
         <nav class="navbar navbar-expand navbar-dark bg-dark sticky-top justify-content-between">
             <span class="navbar-brand"><i class="fas fa-compact-disc"></i> IT SPA</span>
@@ -14,12 +15,11 @@ export const nav = () => {
         </nav>
     `);
 
-    // uzupelnij <ul> elementami <li>
+    // Filling <ul> with <li> elements
     const navBarItems = routes.map(route => navItem(route));
-    
     navBar.find('ul').append(navBarItems);
     
-
+    // Adding hamburger menu for smaller screen widths
     const hamburger = $(`
     <li class="hamburger">
         <div class="dropdown dropleft">
@@ -36,6 +36,7 @@ export const nav = () => {
     </li>
     `);
 
+    // Appending hamburgert to the navbar
     navBar.find('ul').last().append(hamburger);
 
     fragment.append(navBar)

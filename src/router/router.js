@@ -1,3 +1,5 @@
+// Class adding router functionality
+
 import $ from 'jquery';
 import { oops } from '../views/oops';
 
@@ -23,7 +25,7 @@ export class Router {
     }
 
     get(path) {
-        // znajduje sciezke o zadanym path lub zwraca undefined
+        // Finds route for required path or returns undefined
         return this.routes.find(route => route.path === path);
     }
 
@@ -36,16 +38,16 @@ export class Router {
             // obsluguje istniejaca sciezke
             const { component } = this.get(path);
             const html = component();
-            // renderuje nowy widok wewnatrz elementu "outlet"
+            // Renders new view inside "outlet" element
             this.outlet.empty().append(html);
         } else {
-            // obluguje nieistniejaca sciezke (oops...)
+            // Handles non existing route (oops...)
             const html = oops();
             this.outlet.empty().append(html);
         }
 
-        // zapamietuje nowy "stan" w przegladarce oraz
-        // ustawia wybrana sciezke -- path
+        // Remembers new "state" in the browser
+        // Sets chosen path
         history.pushState(data, '', path);
     }
 

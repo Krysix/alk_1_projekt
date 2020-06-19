@@ -1,4 +1,4 @@
-// rooms.js
+// Function for displaying content of the rooms page
 
 import $ from 'jquery';
 import { hideHomePage, hideLogin, hideDate } from './../common/index';
@@ -13,6 +13,7 @@ import { displayCart } from './../cart/index';
 export const rooms = () => {
     const fragment = $(new DocumentFragment());
 
+    // Hiding and displaying related elements on the page
     hideHomePage();
     hideRegister();
     hideLogin();
@@ -20,15 +21,22 @@ export const rooms = () => {
     addCart();
     displayCart();
 
+    // Changing navabar style to display which page we are on
+    $('.navbar-nav li:eq(0)').css('color', '#202020');
+    $('.navbar-nav li:eq(1)').css('color', '#b37436');
+    $('.navbar-nav li:eq(2)').css('color', '#202020');
+    $('.navbar-nav li:eq(3)').css('color', '#202020');
+
+    // Building rooms page html
     const welcomeRoom = $(`
     <div class="pick-rt"><h2>Pick a room <i class="fas fa-laptop-house icon-large"></i> </h2> 
     </div>
     `);
-
+    // Adding container
     const container = $(`<div class='container'></div>`)
 
-
-    fetch(`http://localhost:3000/rooms`)
+    // Fetching rooms from datebase.json and adding them to the container
+    fetch(`https://alk-fake-api.herokuapp.com/rooms`)
         .then((response) => response.json())
         .then((rooms) => {
 
@@ -71,16 +79,14 @@ export const rooms = () => {
             })
         });
 
-
+    // Adding container to the page
     container.append(welcomeRoom)
-
     fragment.append(container);
 
+    // Adding logout button functionality
     $('.logoutBtn').on('click', function (e) {
         handleLogout(e)
     });
-
-    
 
     return fragment;
 }

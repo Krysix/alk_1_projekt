@@ -1,35 +1,79 @@
-//funkcja do osbługi slidera zdjęć na stronie głównej
+// Function for using image slider on the main page
 
 import $ from "jquery";
 
 export function sliderControl() {
     const slider = $(".img-prev-slider");
 
-    let counter = 1;
+    // Finding slider button elements in the DOM 
+    const firstbtn = $('#first-img-btn');
+    const secondbtn = $('#second-img-btn');
+    const thirdbtn = $('#third-img-btn');
+    const fourthbtn = $('#fourth-img-btn');
 
-    function transition(counter) {
-      slider.css({'transform' : 'translate(' + (-1100 * counter) +  'px)',
+    // Setting initial button active
+    firstbtn.css('color', '#b37436');
+
+    // Setting starting parameters
+    let counter = 1;
+    let width;
+    let rotateParam;
+
+    // Calculating rotating pixel value
+    function transition(counter, width) {
+
+        // Parameters added based on the @media parameters
+        if (width >= 1200 ) {
+            rotateParam = -1100;
+        } else if (width < 1200 && width >= 1000) {
+            rotateParam = -800;
+        } else if (width < 1000) {
+            rotateParam = -700;
+        };
+
+        // Rorating to the needed image
+      slider.css({'transform' : 'translate(' + (rotateParam * counter) +  'px)',
         'transition': 'all 1s ease-in-out'});
     }
     
-    const firstbtn = $('#first-img-btn');
+    // Image buttons
     firstbtn.on('click', () => {
+        width = $(window).width();
         counter = 0;
-        transition(counter);
+        firstbtn.css('color', '#b37436');
+        secondbtn.css('color', '#202020');
+        thirdbtn.css('color', '#202020');
+        fourthbtn.css('color', '#202020');
+        transition(counter, width);
     });
-    const secondbtn = $('#second-img-btn');
+
     secondbtn.on('click', () => {
+        width = $(window).width();
         counter = 1;
-        transition(counter);
+        firstbtn.css('color', '#202020');
+        secondbtn.css('color', '#b37436');
+        thirdbtn.css('color', '#202020');
+        fourthbtn.css('color', '#202020');
+        transition(counter, width);
     });
-    const thirdbtn = $('#third-img-btn');
+    
     thirdbtn.on('click', () => {
+        width = $(window).width();
         counter = 2;
-        transition(counter);
+        firstbtn.css('color', '#202020');
+        secondbtn.css('color', '#202020');
+        thirdbtn.css('color', '#b37436');
+        fourthbtn.css('color', '#202020');
+        transition(counter, width);
     });
-    const fourthbtn = $('#fourth-img-btn');
+    
     fourthbtn.on('click', () => {
+        width = $(window).width();
         counter = 3;
-        transition(counter);
+        firstbtn.css('color', '#202020');
+        secondbtn.css('color', '#202020');
+        thirdbtn.css('color', '#202020');
+        fourthbtn.css('color', '#b37436');
+        transition(counter, width);
     });
 };

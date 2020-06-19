@@ -1,5 +1,6 @@
-import $ from "jquery";
+// Function counts number of rooms and treatments inside the cart by looking at the list length
 
+import $ from "jquery";
 
 export const cartItemNumber = () => {
 
@@ -9,6 +10,7 @@ export const cartItemNumber = () => {
   
   roomNum = $(".room-list li").length;
   treatNum = $(".treat-list li").length;
+  console.log(roomNum, treatNum)
 
   total = roomNum + treatNum;
 

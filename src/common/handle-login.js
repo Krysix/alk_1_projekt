@@ -1,3 +1,4 @@
+// Function for handling login in
 
 import $ from "jquery";
 import { modalText } from "../common/index";
@@ -9,7 +10,8 @@ export function handleLogin(e) {
   let process = false;
   let getI = 0;
 
-  fetch(`http://localhost:3000/users`)
+  // Checking if login and password are correct and existing inside datebase.json
+  fetch(`https://alk-fake-api.herokuapp.com/users`)
     .then((response) => response.json())
     .then((users) => {
       for (let i = 0; i < users.length; i++) {
@@ -20,8 +22,9 @@ export function handleLogin(e) {
         };
 
       }
+      // Find user in datebase and change his status to "loggedin: true"
       if (process === true) {
-        fetch(`http://localhost:3000/users/${passwordId}`, {
+        fetch(`https://alk-fake-api.herokuapp.com/users${passwordId}`, {
           method: 'PUT',
           headers: { 'Content-type': 'application/json' },
           body: JSON.stringify({
@@ -32,13 +35,12 @@ export function handleLogin(e) {
           })
 
         });
-
-        $('#emailL').val('');
-        $('#passwordL').val('');
-        
+       
+        // Redirect to home page
         window.location.replace("http://localhost:1234");
         
       } else {
+        // Display error message 
         modalText("Wrong login or password");
         $('#emailL').val('') ;
         $('#passwordL').val('');
