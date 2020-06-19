@@ -24,7 +24,7 @@ export function handleLogin(e) {
       }
       // Find user in datebase and change his status to "loggedin: true"
       if (process === true) {
-        fetch(`https://alk-fake-api.herokuapp.com/users${passwordId}`, {
+        fetch(`https://alk-fake-api.herokuapp.com/users/${passwordId}`, {
           method: 'PUT',
           headers: { 'Content-type': 'application/json' },
           body: JSON.stringify({

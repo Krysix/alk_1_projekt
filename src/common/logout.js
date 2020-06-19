@@ -21,7 +21,7 @@ export function handleLogout(e) {
 
       // Removing logged in status from particular user
       if (process === true) {
-        fetch(`https://alk-fake-api.herokuapp.com/users${passwordId}`, {
+        fetch(`https://alk-fake-api.herokuapp.com/users/${passwordId}`, {
           method: 'PUT',
           headers: { 'Content-type': 'application/json' },
           body: JSON.stringify({

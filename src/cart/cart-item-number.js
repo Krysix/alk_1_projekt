@@ -10,7 +10,6 @@ export const cartItemNumber = () => {
   
   roomNum = $(".room-list li").length;
   treatNum = $(".treat-list li").length;
-  console.log(roomNum, treatNum)
 
   total = roomNum + treatNum;
 

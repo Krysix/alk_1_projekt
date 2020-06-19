@@ -34,7 +34,8 @@ export const displayCart = () => {
         <span class="remove-btn"> <i class="fas fa-trash-alt"></i></span>
       </li>
       `);
-      sumPrice = sumPrice + (noDolarSign * days[0]);
+      sumPrice = sumPrice + (noDolarSign * days);
+      console.log(days);
 
     } else {
       $(".treat-list").append(`
