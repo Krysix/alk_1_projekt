@@ -13,6 +13,10 @@ npm run start
 - Webpack
 - EmailJs
 
+## Plany na przyszłość
+
+Rozrzeszenie projektu o backend w node.js oraz użycie mongoDB do przechowywania danych.
+
 # IT SPA - wytyczne
 
 Projekt polega na napisaniu aplikacji Single Page Application dla ośrodka SPA dedykowanego programistom.
