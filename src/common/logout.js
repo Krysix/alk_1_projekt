@@ -8,7 +8,7 @@ export function handleLogout(e) {
   let getI = 0;
 
   // Looking for user who is logged in
-  fetch(`https://alk-fake-api.herokuapp.com/users`)
+  fetch(`http://localhost:3000/users`)
     .then((response) => response.json())
     .then((users) => {
       for (let i = 0; i < users.length; i++) {
@@ -16,12 +16,13 @@ export function handleLogout(e) {
           process = true;
           passwordId = users[i].id;
           getI = i;
+          console.log('dupa')
         };
       }
 
       // Removing logged in status from particular user
       if (process === true) {
-        fetch(`https://alk-fake-api.herokuapp.com/users/${passwordId}`, {
+        fetch(`http://localhost:3000/users/${passwordId}`, {
           method: 'PUT',
           headers: { 'Content-type': 'application/json' },
           body: JSON.stringify({

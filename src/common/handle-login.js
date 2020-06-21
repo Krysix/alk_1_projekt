@@ -11,7 +11,7 @@ export function handleLogin(e) {
   let getI = 0;
 
   // Checking if login and password are correct and existing inside datebase.json
-  fetch(`https://alk-fake-api.herokuapp.com/users`)
+  fetch(`http://localhost:3000/users`)
     .then((response) => response.json())
     .then((users) => {
       for (let i = 0; i < users.length; i++) {
@@ -24,7 +24,7 @@ export function handleLogin(e) {
       }
       // Find user in datebase and change his status to "loggedin: true"
       if (process === true) {
-        fetch(`https://alk-fake-api.herokuapp.com/users/${passwordId}`, {
+        fetch(`http://localhost:3000/users/${passwordId}`, {
           method: 'PUT',
           headers: { 'Content-type': 'application/json' },
           body: JSON.stringify({

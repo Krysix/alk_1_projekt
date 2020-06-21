@@ -9,7 +9,7 @@ export function handleRegister(e) {
   let newUser = true;
 
   // Checking if input email is new user
-  fetch(`https://alk-fake-api.herokuapp.com/users`)
+  fetch(`http://localhost:3000/users`)
     .then((response) => response.json())
     .then((users) => {
       for (let i = 0; i < users.length; i++) {
@@ -20,7 +20,7 @@ export function handleRegister(e) {
       
       // Adding new user to the datebase
       if (newUser === true) {
-        fetch(`https://alk-fake-api.herokuapp.com/users`, {
+        fetch(`http://localhost:3000/users`, {
           method: 'POST',
           headers: { 'Content-type': 'application/json' },
           body: JSON.stringify({

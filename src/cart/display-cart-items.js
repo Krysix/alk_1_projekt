@@ -35,7 +35,6 @@ export const displayCart = () => {
       </li>
       `);
       sumPrice = sumPrice + (noDolarSign * days);
-      console.log(days);
 
     } else {
       $(".treat-list").append(`

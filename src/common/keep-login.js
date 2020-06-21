@@ -9,7 +9,7 @@ export function keepLogin() {
   let getI;
 
   // Looking for loggedin = true; parameter. If found enable "Go to payment" option.
-  fetch(`https://alk-fake-api.herokuapp.com/users`)
+  fetch(`http://localhost:3000/users`)
     .then((response) => response.json())
     .then((users) => {
       for (let i = 0; i < users.length; i++) {
