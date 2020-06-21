@@ -18,7 +18,8 @@
   "dependencies": {
     "bootstrap": "^4.5.0",
     "emailjs-com": "^2.4.1",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "parcel": "^1.12.4"
   },
   "repository": {
     "type": "git",
