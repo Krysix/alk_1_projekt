@@ -4,6 +4,17 @@ npm run start:db
 npm run start
 
 ```
+
+## Funkcjonalność
+
+- Możliwość dodania pokoju oraz zabiegu do koszyka
+- Możliwość wybrania daty przyjazdu oraz wyjazdu
+- Zamówienie zwracane w postaci koszyka z możliwością modyfikacji zawartości
+- Aby sfinalizować płatność wymagane jest stworzenie konta oraz zalogowanie
+- Po przejsciu do płatności na maila właściciela strony przesyłane jest podsumowanie
+zamówienia
+- Strona responsywna
+
 ## Technologie
 
 - JavaSript
